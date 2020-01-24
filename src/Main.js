@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Box, Button, Heading, Grommet } from "grommet";
-import { Notification } from 'grommet-icons';
+import { Notification, Menu } from 'grommet-icons';
 
 
 import {
@@ -50,24 +50,49 @@ class Main extends Component {
 	   <HashRouter>
 
 
-        <Grommet theme={theme}>
+        <Grommet theme={theme} full>
+	    <Box fill>
 	  <AppBar>
 	    <Heading level='3' margin='none' color='white'>libresocialnetwork</Heading>
-	    <Button icon={<Notification />} onClick={() => {}} />
+	    <Button icon={<Menu/>} onClick={() => {}} />
 	    </AppBar>
-          <ul className="header">
-            <li><NavLink to="/">Home</NavLink></li>
-            <li><NavLink to="/posts">Posts</NavLink></li>
-            <li><NavLink to="/friends">Friends</NavLink></li>
-            <li><NavLink to="/login">Login</NavLink></li>
-          </ul>
-          <div className="content">
-	    <Route exact path="/" component={Home}/>
+
+	    <Box direction='row' flex overflow={{ horizontal: 'hidden' }}>
+	    
+	    <Box width='small'
+	    align='left'
+	    justify='left'
+	    background='white'
+	    border= '1px'
+	    >
+	    
+	   	<ul className="header">
+            	<li><NavLink to="/">Home</NavLink></li>
+            	<li><NavLink to="/posts">Posts</NavLink></li>
+            	<li><NavLink to="/friends">Friends</NavLink></li>
+           	 <li><NavLink to="/login">Login</NavLink></li>
+          	</ul>
+	    </Box>
+	
+	    <Box>
+	  <Route exact path="/" component={Home}/>
 	    <Route path="/posts" component={Posts}/>
 	    <Route path="/friends" component={Friends}/>
-      <Route path="/login" component={Login}/>
+            <Route path="/login" component={Login}/>
 
-          </div>
+
+	    </Box>
+	 
+  
+	</Box>
+	
+	    
+	</Box>
+
+
+
+
+
         </Grommet>
 	    </HashRouter>
     );
