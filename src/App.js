@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import { Box, Button, Heading, Grommet } from "grommet";
 import { Notification, Menu } from 'grommet-icons';
 
@@ -51,6 +51,10 @@ const AppBar = (props) => (
 	    {...props}
 	  />
 	);
+	
+	
+	
+
 
 
 class App extends Component {
@@ -82,18 +86,19 @@ class App extends Component {
         }
     }
 
+	
 
 
 
 
 
 
-
-
+	
 
   render() {
+	
     return (
-
+		
 	   <HashRouter>
 
 
@@ -104,7 +109,10 @@ class App extends Component {
 		<NavLink to="/Home" align='right'>Home</NavLink>
 		<NavLink to="/posts">Posts</NavLink>
 		<NavLink to="/friends">Friends</NavLink>
-	    <Button icon={<Menu/>} onClick={() => {}} />
+	    <Button
+          	icon={<Menu />}
+    		onClick={() => {}}
+        />
 	    </AppBar>
 
 	    <Box direction='row' flex overflow={{ horizontal: 'hidden' }}>

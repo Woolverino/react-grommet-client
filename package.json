@@ -1,6 +1,7 @@
 {
   "name": "my-app",
   "version": "0.1.0",
+  "main": "main.js",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
@@ -13,13 +14,26 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.3.0",
     "styled-components": "^5.0.0",
-    "typeface-roboto": "0.0.75"
+    "typeface-roboto": "0.0.75",
+    "bootstrap": "^4.4.1",
+    "bower": "^1.8.8",
+    "browserify": "^16.5.0",
+    "eiphop": "^1.0.12",
+    "electron-installer-windows": "^2.0.0",
+    "jquery": "^3.4.1",
+    "node-ipc": "^9.1.1",
+    "popper": "^1.0.1",
+    "popper.js": "^1.16.0",
+    "xml2js": "^0.4.23",
+    "yarn": "^1.21.1"
+
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "electron-start": "electron ."
   },
   "eslintConfig": {
     "extends": "react-app"
